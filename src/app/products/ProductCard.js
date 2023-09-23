@@ -1,4 +1,5 @@
-export default function ProductCard({name, description, price, quantity = 0, imageUrl}) {
+import Image from 'next/image';
+export default function ProductCard({name, description, price, quantity = 0, imageUrl, onAdd, onRemove}) {
     const isSelected = quantity > 0;
     return (
         <div className="group relative">
@@ -8,16 +9,17 @@ export default function ProductCard({name, description, price, quantity = 0, ima
                     <span className="absolute w-full h-full">
                     <div className="absolute top-0.5 right-0.5">
                         <span
-                            className="bg-black bg-opacity-50 rounded-full py-1 px-3 text-xs font-semibold text-white">3</span>
+                            className="bg-black bg-opacity-50 rounded-full py-1 px-3 text-xs font-semibold text-white">{quantity}</span>
                     </div>
                 </span>
                 )}
-                <img src={imageUrl}
+                <Image src={imageUrl}
                      alt="Front of men&#039;s Basic Tee in black."
                      className="h-full w-full object-contain object-center lg:h-full lg:w-full"
+                       fill
                 />
             </div>
-            <div className="mt-4 flex justify-between">
+            <div className="mt-4">
                 <div className="flex flex-col">
                     <div className="flex flex-row justify-between space-x-0 5">
                         <h3 className="text-sm text-gray-700">
@@ -33,6 +35,7 @@ export default function ProductCard({name, description, price, quantity = 0, ima
                 <button
                     type="button"
                     className="flex-grow text-center items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-sky-500 hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500"
+                    onClick={onAdd}
                 >
                     Agregar
                 </button>
@@ -40,6 +43,7 @@ export default function ProductCard({name, description, price, quantity = 0, ima
                     <button
                         type="button"
                         className="flex-grow text-center items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500"
+                        onClick={onRemove}
                     >
                         Remover
                     </button>
