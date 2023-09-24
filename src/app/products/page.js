@@ -8,6 +8,8 @@ export default function Products() {
     const products = useProducts();
     const { getQuantity, add, remove } = useCart()
     return (
+        <section>
+            <h1 className="text-2xl">Productos</h1>
             <section className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
                 {products.map((product) => (
                     <ProductCard
@@ -22,5 +24,6 @@ export default function Products() {
                     />
                 ))}
             </section>
+        </section>
     )
 }

@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
                 </a>
             </nav>
           </header>
-          <main className="max-w-5xl m-auto px-8flex flex-col items-center justify-between">
+          <main className="max-w-5xl m-auto px-8 flex flex-col items-center justify-between pt-4">
             {children}
           </main>
         </div>
