@@ -38,9 +38,17 @@ export default function useCart() {
         }
     };
 
+    const clean = () => {
+        saveCart({});
+    }
+
     const getQuantity = (product) => {
         return cart[product.name] || 0;
     }
 
-    return { getQuantity, add, remove };
+    const isEmpty = () => {
+        return Object.keys(cart).length === 0;
+    }
+
+    return { getQuantity, add, remove, clean, isEmpty };
 }

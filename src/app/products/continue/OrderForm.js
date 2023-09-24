@@ -45,7 +45,7 @@ const ZIPCodeInput = ({field}) => (
 )
 
 const formSchema = z.object({
-    username: z.string().nonempty({message: "El nombre es requerido"}),
+    fullname: z.string().nonempty({message: "El nombre es requerido"}),
     address: z.string().nonempty({message: "La dirección es requerida"}),
     zipCode: z.string().nonempty({message: "El código postal es requerido"}),
 })
@@ -64,10 +64,10 @@ export default function OrderForm({ onSubmit }) {
         <section>
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-6">
-                    <FormField control={form.control} name="username" render={FullNameInput}/>
+                    <FormField control={form.control} name="fullname" render={FullNameInput}/>
                     <FormField control={form.control} name="address" render={ShippingAddressInput}/>
                     <FormField control={form.control} name="zipCode" render={ZIPCodeInput}/>
-                    <Button type="submit">Enviar</Button>
+                    <Button type="submit">Submit</Button>
                 </form>
             </Form>
         </section>
