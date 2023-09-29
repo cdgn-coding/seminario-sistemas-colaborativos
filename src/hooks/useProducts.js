@@ -43,10 +43,22 @@ export default function useProducts() {
             price: 950,
         },
         {
-            name: "Medialunas",
+            name: "Medialunas (Saladas)",
             imageUrl: "/products/medialunassaladas.jpg",
             description: "Medialunas de hojaldre saladas.",
             price: 120,
-        },        
+        },  
+        {
+            name: "Medialunas (Dulces)",
+            imageUrl: "/products/medialunasdulces.jpg",
+            description: "Medialunas de hojaldre dulces.",
+            price: 120,
+        },
+        {
+            name: "Medialunas integrales",
+            imageUrl: "/products/medialunaintegral.jpg",
+            description: "Medialunas de manteca hecha con harinas integrales.",
+            price: 150,
+        },                  
     ]
 }
