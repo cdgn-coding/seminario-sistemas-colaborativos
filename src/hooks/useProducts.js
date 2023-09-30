@@ -25,7 +25,7 @@ export default function useProducts() {
             price: 800,
         },
         {
-            name: "cold-brew",
+            name: "Cold-brew",
             imageUrl: "/products/cold-brew.jpg",
             description: "Café de infusión en frío.",
             price: 700,
