@@ -35,6 +35,10 @@
     --radius: 0.5rem;
   }
 
+  h1 {
+    font-weight: bold;
+  }
+  
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
