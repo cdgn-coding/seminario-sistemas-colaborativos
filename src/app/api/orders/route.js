@@ -16,11 +16,11 @@ function createNumericShortId(length = 6) {
 const orderSchema = z.object({
     fullname: z.string().nonempty({message: "El nombre es requerido"}),
     address: z.string().nonempty({message: "La dirección es requerida"}),
-    zipCode: z.string().nonempty({message: "El código postal es requerido"}),
+    zipCode: z.string().nonempty({message: "El telefono es requerido"}),
     products: z.array(z.object({
         name: z.string().nonempty({message: "El nombre es requerido"}),
         price: z.number().nonnegative({message: "El precio debe ser mayor a 0"}),
-        quantity: z.number().nonnegative({message: "La cantidad debe ser mayor a 0"}),
+        quantity: z.number().nonnegative({message: "Debe ser un número telefónico"}),
     })).nonempty({message: "Los productos son requeridos"}),
 })
 

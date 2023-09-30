@@ -36,9 +36,9 @@ const ShippingAddressInput = ({field}) => (
 
 const ZIPCodeInput = ({field}) => (
     <FormItem>
-        <FormLabel>Código postal</FormLabel>
+        <FormLabel>Número Telefónico</FormLabel>
         <FormControl>
-            <Input placeholder="1648" {...field} />
+            <Input placeholder="343 4667635" {...field} />
         </FormControl>
         <FormMessage/>
     </FormItem>
@@ -47,7 +47,7 @@ const ZIPCodeInput = ({field}) => (
 const formSchema = z.object({
     fullname: z.string().nonempty({message: "El nombre es requerido"}),
     address: z.string().nonempty({message: "La dirección es requerida"}),
-    zipCode: z.string().nonempty({message: "El código postal es requerido"}),
+    zipCode: z.string().nonempty({message: "El número telefónico es requerido"}),
 })
 
 export default function OrderForm({ onSubmit }) {
@@ -67,7 +67,7 @@ export default function OrderForm({ onSubmit }) {
                     <FormField control={form.control} name="fullname" render={FullNameInput}/>
                     <FormField control={form.control} name="address" render={ShippingAddressInput}/>
                     <FormField control={form.control} name="zipCode" render={ZIPCodeInput}/>
-                    <Button type="submit">Submit</Button>
+                    <Button type="submit">Finalizar</Button>
                 </form>
             </Form>
         </section>

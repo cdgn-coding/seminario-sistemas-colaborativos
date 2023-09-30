@@ -89,7 +89,6 @@ export default function useProducts() {
             imageUrl: "/products/cafeengrano.webp",
             description: "1 Kg de café arábico con un tostado medio. 1Kg.",
             price: 5300,
-        },        
-
+        }       
     ]
 }

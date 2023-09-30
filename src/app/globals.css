@@ -38,7 +38,11 @@
   h1 {
     font-weight: bold;
   }
-  
+
+  h3 {
+    font-style: italic;
+  }
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
