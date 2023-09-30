@@ -33,6 +33,7 @@ export default function RootLayout({ children }) {
           <main className="max-w-5xl m-auto px-8 flex flex-col items-center justify-between pt-4">
             {children}
           </main>
+          <footer className="flex flex-col items-center py-4 sticky top-0 z-50 bg-amber-600"></footer>
         </div>
       </body>
     </html>
