@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
           <header className="flex flex-col items-center py-4 sticky top-0 z-50 bg-amber-600">
             
             <h1 className="text-center text-2xl text-slate-950">SABOR ESPRESSO</h1>
-            <h1 className="text-center text-2xl text-slate-200">Tienda de Café</h1>
+            <h3 className="text-center text-2xl text-slate-200">Tienda de Café</h3>
             <nav className="flex flex-row justify-around space-x-6">
                 <a href="/products" className="text-slate-950 hover:text-sky-500 border-b-2 border-gray-100 hover:border-b-2 hover:border-sky-500">
                     Inicio
