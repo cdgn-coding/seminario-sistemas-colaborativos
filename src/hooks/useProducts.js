@@ -43,6 +43,12 @@ export default function useProducts() {
             price: 950,
         },
         {
+            name: "Frappé Coffee",
+            imageUrl: "/products/frappe.jpg",
+            description: "Café con hielo cubierto de espuma elaborado a partir de café arábico.",
+            price: 1100,
+        },         
+        {
             name: "Medialunas (Saladas)",
             imageUrl: "/products/medialunassaladas.jpg",
             description: "Medialunas de hojaldre saladas.",
@@ -50,7 +56,7 @@ export default function useProducts() {
         },  
         {
             name: "Medialunas (Dulces)",
-            imageUrl: "/products/medialunasdulce.jpg",
+            imageUrl: "/products/medialunadulce.jpg",
             description: "Medialunas de hojaldre dulces.",
             price: 120,
         },
@@ -61,10 +67,29 @@ export default function useProducts() {
             price: 150,
         },
         {
-            name: "Medialunas integrales",
-            imageUrl: "/products/medialunaintegral.jpg",
-            description: "Medialunas de manteca hecha con harinas integrales.",
-            price: 150,
-        },                           
+            name: "Facturas",
+            imageUrl: "/products/facturas.jpg",
+            description: "Factura a elección (con dulce de leche, membrillo, crema pastelera).",
+            price: 190,
+        },        
+        {
+            name: "Café Molido Descafeinado",
+            imageUrl: "/products/cafemolido.webp",
+            description: "1 Kg. de Café molido descafeinado con un tostado medio.",
+            price: 3500,
+        },        
+        {
+            name: "Café Molido Blend",
+            imageUrl: "/products/cafemolido2.webp",
+            description: "1 Kg. de café de tostado medio hecho con un blend especial.",
+            price: 4300,
+        },        
+        {
+            name: "Café en Grano",
+            imageUrl: "/products/cafeengrano.webp",
+            description: "1 Kg de café arábico con un tostado medio. 1Kg.",
+            price: 5300,
+        },        
+
     ]
 }
