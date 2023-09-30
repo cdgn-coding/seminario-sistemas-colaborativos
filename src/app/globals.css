@@ -43,6 +43,14 @@
     font-style: italic;
   }
 
+  header {
+    margin-bottom: 10px;
+  }
+
+  footer {
+    margin-top: 10px;
+  }
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
