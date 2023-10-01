@@ -67,7 +67,7 @@ export default function OrderForm({ onSubmit }) {
                     <FormField control={form.control} name="fullname" render={FullNameInput}/>
                     <FormField control={form.control} name="address" render={ShippingAddressInput}/>
                     <FormField control={form.control} name="zipCode" render={ZIPCodeInput}/>
-                    <Button type="submit" class= "bg-amber-950">Finalizar</Button>
+                    <Button type="submit">Finalizar</Button>
                 </form>
             </Form>
         </section>

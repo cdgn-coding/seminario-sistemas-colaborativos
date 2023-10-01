@@ -33,10 +33,10 @@ export default function RootLayout({ children }) {
           <main className="max-w-5xl m-auto px-8 flex flex-col items-center justify-between pt-4">
             {children}
           </main>
+        </div>
           <footer className="flex flex-col items-center py-4 sticky top-0 z-50 bg-amber-600">
           Calidad del café y la importancia del aroma y la frescura de los granos
-          </footer>
-        </div>
+          </footer>      
       </body>
     </html>
   )
