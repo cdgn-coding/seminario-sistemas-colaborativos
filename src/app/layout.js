@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
         </div>     
       </body>
       <footer className="flex flex-col items-center py-4 sticky top-0 z-50 bg-amber-600">
-          Calidad del café y la importancia del aroma y la frescura de los granos
+          Calidad del café, la importancia del aroma y la frescura de los granos
       </footer> 
     </html>
   )
