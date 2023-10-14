@@ -6,12 +6,12 @@ export default function ProductCard({name, description, price, quantity = 0, ima
             <div
                 className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-100 lg:aspect-none h-80 relative">
                 {isSelected && (
-                    <span className="absolute w-full h-full">
-                    <div className="absolute top-0.5 right-0.5">
-                        <span
-                            className="bg-black bg-opacity-50 rounded-full py-1 px-3 text-xs font-semibold text-white">{quantity}</span>
+                    <div className="absolute w-full h-full z-10">
+                        <div className="absolute top-0.5 right-0.5">
+                            <span
+                                className="bg-black bg-opacity-50 rounded-full py-1 px-3 text-xs font-semibold text-white">{quantity}</span>
+                        </div>
                     </div>
-                </span>
                 )}
                 <Image src={imageUrl}
                      alt="Front of men&#039;s Basic Tee in black."
