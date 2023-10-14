@@ -36,7 +36,7 @@ export default function Products() {
     return (
         <section className="w-full">
             <h1 className="text-2xl">Manejar stock</h1>
-            {!loadingStock && <section className="flex flex-col relative">
+            {!loadingStock && <section className="flex flex-col relative space-y-2">
                 {products.map((product) => (
                     <ProductCard
                         key={product.name}
