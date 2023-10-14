@@ -4,8 +4,7 @@ export const defaultStock = 1000000
 
 export async function getStock(productName) {
     const stock = await kv.get(productName)
-    if (!stock) {
-        await setStock(productName, defaultStock)
+    if (typeof stock !== "number") {
         return defaultStock
     }
     return stock
