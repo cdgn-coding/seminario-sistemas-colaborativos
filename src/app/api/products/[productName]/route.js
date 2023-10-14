@@ -11,7 +11,7 @@ export async function GET(req, { params }) {
 }
 
 export async function PUT(req, { params }) {
-    const {stock} = req.body;
+    const {stock} = await req.json()
     await setStock(params.productName, stock);
     return NextApiResponse.json({stock});
 }
