@@ -22,9 +22,14 @@ export default function useOrders() {
 
     // Make API call, store in localStore, then redirect to /orders, usable inside react components
     const create = async (order) => {
-        const result = await createOrder(order)
-        storeOrderLocally(result)
-        return result
+        try {
+            const result = await createOrder(order)
+            storeOrderLocally(result)
+            return result
+        } catch (e) {
+            console.error(e)
+            alert("Error creando orden, intente de nuevo disminuyendo la cantidad de productos")
+        }
     }
 
     const getAll = () => {
