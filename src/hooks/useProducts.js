@@ -145,7 +145,7 @@ export default function useProducts() {
         }))
         setStock(product.name, stock)
             .then(() => {
-                console.log("Stock guardado correctamente")
+               alert("Stock guardado correctamente")
             }).catch((error) => {
                 console.error(error)
                 alert('Error guardando stock, intente de nuevo')

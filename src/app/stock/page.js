@@ -23,6 +23,8 @@ function ProductCard({name, imageUrl, stock, onSave}) {
             <div className="w-32">
                 <Input
                     value={currentStock}
+                    type={"number"}
+                    pattern="\d+"
                     onChange={(e) => setCurrentStock(e.target.value)}
                 />
             </div>
