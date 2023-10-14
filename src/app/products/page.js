@@ -5,7 +5,7 @@ import useProducts from "@/hooks/useProducts";
 import useCart from "@/hooks/useCart";
 
 export default function Products() {
-    const products = useProducts();
+    const [products, getStock] = useProducts();
     const { getQuantity, add, remove } = useCart()
     return (
         <section>
@@ -18,6 +18,7 @@ export default function Products() {
                         imageUrl={product.imageUrl}
                         description={product.description}
                         price={product.price}
+                        stock={getStock(product)}
                         quantity={getQuantity(product)}
                         onAdd={() => add(product)}
                         onRemove={() => remove(product)}

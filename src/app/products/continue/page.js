@@ -8,7 +8,7 @@ import useOrders from "@/hooks/useOrders";
 import { useRouter } from 'next/navigation'
 
 export default function Continue(props) {
-    const products = useProducts();
+    const [products] = useProducts();
     const { getQuantity, clean: cleanCart, isEmpty } = useCart()
     const { create } = useOrders()
     const router = useRouter()

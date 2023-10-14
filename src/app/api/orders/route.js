@@ -1,6 +1,7 @@
 import {kv} from '@vercel/kv';
 import z from 'zod';
 import {NextResponse as NextApiResponse} from "next/server";
+import {getStock, reduceStock} from "@/services/products";
 
 function createNumericShortId(length = 6) {
     const alphabet = "0123456789"
@@ -37,7 +38,22 @@ export async function POST(req) {
         })
     }
 
+    for (const product of body.products) {
+        const currentStock = getStock(product.name)
+        if (currentStock < product.quantity) {
+            return new Response(null, {
+                status: 400,
+                statusText: "Bad Request",
+                statusDetail: `No hay suficiente stock para el producto ${product.name}`,
+            })
+        }
+    }
+
     try {
+        for (const product of body.products) {
+            await reduceStock(product.name, product.quantity)
+        }
+
         const id = createNumericShortId()
         const total = body.products.reduce((acc, product) => {
             return acc + product.price * product.quantity
@@ -45,7 +61,7 @@ export async function POST(req) {
         const order = {
             id,
             fullname: body.fullname,
-                address: body.address,
+            address: body.address,
             zipCode: body.zipCode,
             products: body.products,
             date: new Date().toISOString(),

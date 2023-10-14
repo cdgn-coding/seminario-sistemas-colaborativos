@@ -25,6 +25,9 @@ export default function RootLayout({ children }) {
                 <a href="/orders" className="text-slate-950 hover:text-sky-500">
                     Mis pedidos
                 </a>
+                <a href="/stock" className="text-slate-950 hover:text-sky-500">
+                    Manejar stock
+                </a>
             </nav>
           </header>
           <main className="max-w-5xl m-auto px-8 flex flex-col items-center justify-between pt-4">
