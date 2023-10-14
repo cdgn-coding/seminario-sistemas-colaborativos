@@ -20,8 +20,8 @@ export default function Products() {
                         price={product.price}
                         stock={getStock(product)}
                         quantity={getQuantity(product)}
-                        onAdd={() => add(product)}
-                        onRemove={() => remove(product)}
+                        onAdd={() => getStock(product) < getQuantity(product) && add(product)}
+                        onRemove={() => getQuantity(product) > 0 && remove(product)}
                     />
                 ))}
             </section>
